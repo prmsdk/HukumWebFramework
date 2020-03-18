@@ -12,7 +12,7 @@
 
 <!-- Right Icon menu Sidebar -->
 <div class="navbar-right">
-    <ul class="navbar-nav">
+    <ul class="navbar-nav navbar-md">
         <li><a href="#search" class="main_search" title="Search..."><i class="zmdi zmdi-search"></i></a></li>
         <li class="dropdown">
             <a href="javascript:void(0);" class="dropdown-toggle" title="Notifications" data-toggle="dropdown" role="button"><i class="zmdi zmdi-notifications"></i>
@@ -174,7 +174,7 @@
                 </li>
             </ul>
         </li>
-        <li><a href="sign-in.html" class="mega-menu" title="Sign Out"><i class="zmdi zmdi-power"></i></a></li>
+        <li><a href="<?=base_url()?>admin/auth/logout" class="mega-menu" title="Sign Out"><i class="zmdi zmdi-power"></i></a></li>
     </ul>
 </div>
 
@@ -182,28 +182,27 @@
 <aside id="leftsidebar" class="sidebar">
     <div class="navbar-brand">
         <button class="btn-menu ls-toggle-btn" type="button"><i class="zmdi zmdi-menu"></i></button>
-        <a href="index.html"><img src="<?=base_url()?>assets/admin/images/logo.svg" width="25" alt="Aero"><span class="m-l-10">Aero</span></a>
+        <a href="index.html"><img src="<?=base_url()?>assets/admin/images/haha.svg" width="25" alt="Aero"><span class="m-l-10">HakCipta</span></a>
     </div>
     <div class="menu">
         <ul class="list">
             <li>
                 <div class="user-info">
-                    <a class="image" href="profile.html"><img src="<?=base_url()?>assets/admin/images/profile_av.jpg" alt="User"></a>
-                    <div class="detail">
-                        <h4>Michael</h4>
-                        <small>Super Admin</small>                        
+                    <div class="detail justify-content-center pl-2 py-2">
+                        <h4><?php echo $this->session->userdata('username');?></h4>
+                        <small><?php echo $this->session->userdata('role_id') == '1' ? "ADMIN" : "STAFF" ;?></small>                        
                     </div>
                 </div>
             </li>
-            <li class="active open"><a href="index.html"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
+            <li class="active open"><a href="<?=base_url()?>admin/"><i class="zmdi zmdi-home"></i><span>Dashboard</span></a></li>
             <li><a href="<?=base_url()?>admin/hak_cipta/"><i class="zmdi zmdi-account"></i><span>Hak Cipta</span></a></li>
+            <?php if($this->session->userdata('role_id') == '1'){?>
             <li><a href="javascript:void(0);" class="menu-toggle"><i class="zmdi zmdi-apps"></i><span>Master</span></a>
                 <ul class="ml-menu">
                     <li><a href="<?=base_url()?>admin/jenis_karya">Jenis Karya</a></li>
-                    <li><a href="<?=base_url()?>admin/user">Data User</a></li>
-                    <li><a href="<?=base_url()?>admin/admin">Data Admin</a></li> 
                 </ul>
             </li>
+            <?php } ?>
             <!-- <li>
                 <div class="progress-container progress-primary m-t-10">
                     <span class="progress-badge">Traffic this Month</span>

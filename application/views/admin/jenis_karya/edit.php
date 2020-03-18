@@ -3,11 +3,11 @@
         <div class="block-header">
             <div class="row">
                 <div class="col-lg-7 col-md-6 col-sm-12">
-                    <h2>Data Portfolio</h2>
+                    <h2>Data Jenis Karya</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="<?=base_url()?>admin/dashboard"><i class="zmdi zmdi-home"></i> TumbasApp</a></li>
-                        <li class="breadcrumb-item"><a href="<?=base_url()?>admin/master/portfolio">Portfolio</a></li>
-                        <li class="breadcrumb-item active">Edit Portfolio</li>
+                        <li class="breadcrumb-item"><a href="<?=base_url()?>admin/jenis_karya">Jenis Karya</a></li>
+                        <li class="breadcrumb-item active">Edit Jenis Karya</li>
                     </ul>
                     <button class="btn btn-primary btn-icon mobile_menu" type="button"><i class="zmdi zmdi-sort-amount-desc"></i></button>
                 </div>
@@ -22,7 +22,7 @@
             <div class="col-lg-12">
               <div class="card">
                 <div class="header">
-                  <h2><strong>Edit</strong> Portfolio </h2>
+                  <h2><strong>Edit</strong> Jenis Karya </h2>
                 </div>
 
                 <div class="body">

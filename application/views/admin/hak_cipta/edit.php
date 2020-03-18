@@ -24,19 +24,23 @@
                 <div class="header">
                   <h2><strong>Edit</strong> Hak Cipta </h2>
                 </div>
+                <?php echo $this->session->flashdata('pesan');?>
 
                 <div class="body">
                 <?php foreach ($hak_cipta as $cipta ) { ?>
                   <form action="<?=base_url('admin/hak_cipta/update')?>" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id" value="<?=$cipta->id?>">
-                    <div class="form-group">
-                      <label for="id_user">Calon Pemilik Hak Cipta :</label>
-                      <select id="id_user" name="id_user" class="form-control show-tick" aria-describedby="id_userId" readonly>
-                          <option>-- Please select --</option>
-                          <?php foreach ($user as $u ) { ?>
-                          <option value="<?=$u->id?>" <?php echo $cipta->id_user == $u->id? "selected" : "" ; ?>><?=$u->nama?></option>
-                          <?php }?>
-                      </select>
+                  <input type="hidden" name="id" value="<?=$cipta->id?>">
+                  <div class="form-group">
+                    <label for="user_nama">Calon Pemilik Hak Cipta :</label>
+                    <?php foreach ($user as $u ) { ?>
+                    <input readonly value="<?=$u->nama?>" type="text" name="user_nama" id="user_nama" class="form-control" placeholder="Masukkan judul . ." aria-describedby="judulId">
+                    <?php }?>
+                  </div>
+                  <div class="form-group d-none">
+                    <label for="id_user">Calon Pemilik Hak Cipta :</label>
+                    <?php foreach ($user as $u ) { ?>
+                    <input readonly value="<?=$u->id?>" type="text" name="id_user" id="id_user" class="form-control" placeholder="Masukkan judul . ." aria-describedby="judulId">
+                    <?php }?>
                   </div>
 
                   <div class="form-group">

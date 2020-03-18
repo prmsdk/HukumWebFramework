@@ -31,6 +31,7 @@
                                 </div>
                             </div>
                         </div>
+                        <?php echo $this->session->flashdata('pesan');?>
                         <div class="body">
                             <div class="table-responsive">
                                 <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
@@ -60,7 +61,7 @@
                                             <td><?=$karya->keterangan?></td>
                                             <td style="width: 70px;">
                                                 <a class="btn btn-primary btn-sm px-2" href="<?=base_url()?>admin/jenis_karya/edit/<?=$karya->id?>"><i class="zmdi zmdi-edit"></i></a>
-                                                <a class="btn btn-danger btn-sm" href="<?=base_url()?>admin/jenis_karya/delete/<?=$karya->id?>"><i class="zmdi zmdi-delete"></i></a>
+                                                <a onclick="return confirm('Apakah anda yakin untuk menghapus data ini (<?=$karya->nama?>)?');" class="btn btn-danger btn-sm" href="<?=base_url()?>admin/jenis_karya/delete/<?=$karya->id?>"><i class="zmdi zmdi-delete"></i></a>
                                             </td>
                                         </tr>
                                     <?php } ?>

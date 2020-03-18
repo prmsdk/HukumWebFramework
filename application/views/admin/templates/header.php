@@ -5,8 +5,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=Edge">
 <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
 <meta name="description" content="Responsive Bootstrap 4 and web Application ui kit.">
-<title>:: Aero Bootstrap4 Admin :: Home</title>
-<link rel="icon" href="<?=base_url()?>assets/admin/favicon.ico" type="image/x-icon"> <!-- Favicon-->
+<title>Hak Cipta</title>
+<link rel="icon" href="<?=base_url()?>assets/admin/icon.png" type="image/x-icon"> <!-- Favicon-->
 <link rel="stylesheet" href="<?=base_url()?>assets/admin/css/custom.css">
 <link rel="stylesheet" href="<?=base_url()?>assets/admin/plugins/bootstrap/css/bootstrap.min.css">
 <link rel="stylesheet" href="<?=base_url()?>assets/admin/plugins/jvectormap/jquery-jvectormap-2.0.3.min.css"/>
