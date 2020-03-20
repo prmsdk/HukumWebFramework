@@ -45,4 +45,4 @@ $db['default'] = array(
 ## Implementations
 
 1. Jalankan tumbasapp sebagai customer pada link http://localhost/HukumWebFramework/ dan link berikut sebagai admin http://localhost/HukumWebFramework/admin/
-2. Web saat ini per 2020/03/18 masih sangat berantakan dan memerlukan kerja sama tim untuk melakukan pengembangan.
+2. Web saat ini per 2020/03/18 masih memerlukan kerja sama tim untuk melakukan pengembangan.
